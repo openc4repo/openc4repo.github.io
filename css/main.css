@@ -187,8 +187,14 @@ pre, code {background-color: #444; color: #fff; font-family: Verdana; padding: 1
 }
 
 .slim {
-    width:45%;
-    height:4em;
+    width: 45%;
+    height: 4em;
+}
+
+.slim img {
+    width: 2em;
+    display: inline-block;
+    vertical-align: bottom;
 }
 
 .search-results ul li {margin-top: .9em;}
