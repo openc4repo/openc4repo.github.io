@@ -4,19 +4,19 @@
 
 [
   {% for item in articles %}
-    {% unless item.path contains 'example' %}
+    {% if item.path contains 'example' or item.path contains 'index' %}
+    {% else %}
     {
 
       "title"    : "{{ item.title | escape }}",
       "url"      : "{{ site.baseurl }}{{ item.url }}",
-      "category" : "{{ item.category }}",
       "description" : "{{item.description | escape }}",
       "tags"     : "{{ item.tags | join: ', ' }}",
-      "date"     : "{{ item.date }}",
+      "icon"     : "{{ item.icon }}",
       "name" : "{{item.path | remove_first: '.md' | escape }}"
 
     }
     {% unless forloop.last %},{% endunless %}
-    {% endunless %}
+    {% endif %}
   {% endfor %}
 ]
