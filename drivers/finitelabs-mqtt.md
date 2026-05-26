@@ -6,7 +6,7 @@ tags: bridge, mqtt, broker
 icon: finitelabs/mqtt.png
 ---
 
-![MQTT Control4 Driver](finitelabs/home-connect.png)
+![MQTT Control4 Driver](finitelabs/mqtt.png)
 
 Our MQTT Control4 Driver establishes connectivity between Control4 systems and MQTT message brokers like Mosquitto or HiveMQ, enabling publish/subscribe messaging for your smart home.
 
