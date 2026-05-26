@@ -18,7 +18,7 @@ title: Wiki
 {% assign folder1 = site.pages | where_exp: "item" , "item.path contains 'wiki' " | sort:"title" %}
 
 {% for item in folder1 %}
-{% if item.path contains 'index' or item.path contains 'search' %}
+{% if item.path contains 'index' or item.path contains 'search' or item.path contains 'example' %}
 {% else %}
 <a href="{{ item.url }}" class="wiki-item" title="{{ item.description }}">{{ item.title }}</a>
 {% endif %}
