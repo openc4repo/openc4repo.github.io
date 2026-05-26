@@ -22,7 +22,7 @@ title: Drivers
 {% for item in folder1 %}
 {% if item.path contains 'index' or item.path contains 'search' %}
 {% else %}
-<a href="{{ item.url }}" class="wiki-item" title="{{ item.description }}"><img src="item.icon" />{{ item.title }}</a>
+<a href="{{ item.url }}" class="wiki-item" title="{{ item.description }}"><img src="{{ item.icon }}" style="height: 50px" />{{ item.title }}</a>
 {% endif %}
 {% endfor %}
  </ul>

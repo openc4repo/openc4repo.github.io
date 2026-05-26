@@ -17,5 +17,6 @@ With this driver, you can:
     Monitor device status and receive notifications
     Expand your smart home capabilities with affordable DIY components
 
-Open Source version can be found [here](https://github.com/finitelabs/control4-esphome)
-Commercial version can be found [here](https://drivercentral.io/platforms/control4-drivers/utility/esphome/)
+Open Source version can be found [here](https://github.com/finitelabs/control4-esphome).
+
+Commercial version can be found [here](https://drivercentral.io/platforms/control4-drivers/utility/esphome/).
