@@ -6,7 +6,7 @@ tags: tag1, tag2, tag3, these are used for search
 icon: "no-icon.png"
 ---
 
-Example article in wiki. Edit this in markdown.
+Example article in drivers. Edit this in markdown.
 
 ## Title
 ### Smaller title
