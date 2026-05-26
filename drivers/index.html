@@ -20,11 +20,9 @@ title: Drivers
 {% assign folder1 = site.pages | where_exp: "item" , "item.path contains 'drivers' " | sort:"title" %}
 
 {% for item in folder1 %}
-{% if item.path contains 'index' %}
+{% if item.path contains 'index' or item.path contains 'search' %}
 {% else %}
-<a href="{{ item.url }}" class="wiki-item" title="{{ item.description }}">
-<!--{% if item.importance >= 7 %}🌻{% elsif item.importance >= 5 %}🌿{% else %}🌱
-{% endif %}--> {{ item.title }}</a>
+<a href="{{ item.url }}" class="wiki-item" title="{{ item.description }}">{{ item.title }}</a>
 {% endif %}
 {% endfor %}
  </ul>
