@@ -4,6 +4,7 @@
 
 [
   {% for item in articles %}
+    {% unless item.path contains 'example' %}
     {
 
       "title"    : "{{ item.title | escape }}",
@@ -16,5 +17,6 @@
 
     }
     {% unless forloop.last %},{% endunless %}
+    {% endunless %}
   {% endfor %}
 ]

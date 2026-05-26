@@ -4,8 +4,6 @@ title: Wiki
 ---
 	<h1>{{ page.title }}</h1>
 
-<p>Wiki</p>
-
 <!--<p>Notes importance guide: 🌱 < 🌿 < 🌻.<br>
 🌱: Stub or unimportant, 🌿: curious, usually a single idea, 🌻: interesting, more fleshed out, usually finished. </p>-->
 <div style = 'text-align:center;'>
@@ -17,14 +15,12 @@ title: Wiki
 </div>
 
 	<ul class="posts">
-{% assign folder1 = site.pages | where_exp: "item" , "item.path contains 'wiki' " | sort:"importance" | reverse %}
+{% assign folder1 = site.pages | where_exp: "item" , "item.path contains 'wiki' " | sort:"title" %}
 
 {% for item in folder1 %}
-{% if item.path contains 'index' %}
+{% if item.path contains 'index' or item.path contains 'search' %}
 {% else %}
-<a href="{{ item.url }}" class="wiki-item" title="{{ item.description }}">
-<!--{% if item.importance >= 7 %}🌻{% elsif item.importance >= 5 %}🌿{% else %}🌱
-{% endif %}--> {{ item.title }}</a>
+<a href="{{ item.url }}" class="wiki-item" title="{{ item.description }}">{{ item.title }}</a>
 {% endif %}
 {% endfor %}
  </ul>
