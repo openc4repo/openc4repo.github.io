@@ -1,13 +1,9 @@
 ---
 ---
-{% assign folder1 = site.pages | where_exp: "item" , "item.path contains 'wiki/' " | sort:"importance" | reverse %}
-{% assign folder2 = site.posts | sort:"importance" | reverse %}
-
-{% assign articles = folder1 | concat: folder2 | sort:"importance" | reverse %}
+{% assign articles = site.pages | where_exp: "item" , "item.path contains 'wiki/' " | sort:"title" %}
 
 [
   {% for item in articles %}
-  {% if item.sitemap or item.path contains 'wiki/' %}
     {
 
       "title"    : "{{ item.title | escape }}",
@@ -20,6 +16,5 @@
 
     }
     {% unless forloop.last %},{% endunless %}
-    {% endif %}
   {% endfor %}
 ]

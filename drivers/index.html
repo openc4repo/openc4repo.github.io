@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Wiki
+title: Drivers
 ---
 	<h1>{{ page.title }}</h1>
 
@@ -10,14 +10,14 @@ title: Wiki
 🌱: Stub or unimportant, 🌿: curious, usually a single idea, 🌻: interesting, more fleshed out, usually finished. </p>-->
 <div style = 'text-align:center;'>
 <!-- Html Elements for Search -->
-<input type="text" id="search-input" placeholder="Search the Wiki... (tag-based search)" style='font-size: 1.1rem;text-align:center;min-width:75%;'>
+<input type="text" id="search-input" placeholder="Search Drivers... (tag-based search)" style='font-size: 1.1rem;text-align:center;min-width:75%;'>
 
 <div id="search-container">
 <ul id="results-container" style='list-style-type:none;'></ul>
 </div>
 
 	<ul class="posts">
-{% assign folder1 = site.pages | where_exp: "item" , "item.path contains 'wiki' " | sort:"importance" | reverse %}
+{% assign folder1 = site.pages | where_exp: "item" , "item.path contains 'drivers' " | sort:"title" %}
 
 {% for item in folder1 %}
 {% if item.path contains 'index' %}
@@ -42,7 +42,7 @@ title: Wiki
 SimpleJekyllSearch({
   searchInput: document.getElementById('search-input'),
   resultsContainer: document.getElementById('results-container'),
-  json: '/search-wiki.json'
+  json: '/search-drivers.json'
 })
 
 const windowWidth = window.innerWidth;
