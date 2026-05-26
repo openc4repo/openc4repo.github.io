@@ -2,7 +2,7 @@
 author: "Finite Labs"
 title: "ESPHome Control4 Driver"
 description: "Our ESPHome Control4 Driver enables seamless integration between Control4 systems and ESPHome-powered devices, opening up a world of possibilities for your smart home setup."
-tags: bridge, esphome, esp32, lights, locks, bluetooth
+tags: bridge, esphome, esp32, lights, locks, bluetooth, garage, garagedoor, ratgdo, konnected, blaq, white
 icon: finitelabs/esphome.png
 ---
 
